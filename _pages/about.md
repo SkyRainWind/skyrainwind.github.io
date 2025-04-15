@@ -48,8 +48,8 @@ I am Yufeng Tian, a 3-year undergraduate student from Harbin Institute of Techno
 - *2023.10* National Scholarship. 
 <!-- - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
-# 📖 Educations
-- *2022.09 - 2026.06 (expected)*. Harbin Institute of Technology, Computer Science, School of Future Technology.
+<!-- # 📖 Educations -->
+<!-- - *2022.09 - 2026.06 (expected)*. Harbin Institute of Technology, Computer Science, School of Future Technology. -->
 
 <!-- # 💬 Invited Talks -->
 <!-- - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
