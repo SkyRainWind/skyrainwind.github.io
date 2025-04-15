@@ -17,12 +17,12 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am Yufeng Tian, an 3-year undergraduate student from Harbin Institute of Technology. 
+I am Yufeng Tian, a 3-year undergraduate student from Harbin Institute of Technology. 
 
 
 # 🔥 News
 <!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
-- *2025.04*: &nbsp;🎉🎉 ViTaS is released. Project page and Code is coming soon.
+- *2025.02*: &nbsp;🎉🎉 ViTaS is released. Project page and Code is coming soon.
 
 # 📝 Publications 
 
