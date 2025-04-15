@@ -21,9 +21,9 @@ redirect_from:
 
 I am Yufeng Tian, a third-year undergraduate student from [Harbin Institute of Technology](http://www.hit.edu.cn/). I was also a research intern at [IIIS](https://iiis.tsinghua.edu.cn/), where I am fortunate to be advised by Prof. [Huazhe Xu](http://hxu.rocks/) and Dr. [Zhecheng Yuan](https://gemcollector.github.io/).
 
-My current research interests lie in reinforcement learning, robotics and embodied AI. Feel free to contact me.
-
 I used to participate in competitive programming contests and awarded $5$ gold medals in regional contests. Please refer to [here](https://cpcfinder.com/student/702c71f2-8418-4921-b71e-cb85260e5c7b) for partial results.
+
+My current research interests lie in reinforcement learning, robotics and embodied AI. Feel free to contact me.
 
 # 🔥 News
 <!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
