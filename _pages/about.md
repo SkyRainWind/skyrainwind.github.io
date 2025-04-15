@@ -46,7 +46,8 @@ My current research interests lie in reinforcement learning, robotics and embodi
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎖 Honors and Awards
-- *2023.10* National Scholarship. 
+- *2024.12* Xiaomi Special Scholarship (Top 10 among 30000+ undergrads). 
+- *2023.10* National Scholarship (Top 2%). 
 <!-- - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 <!-- # 📖 Educations -->
