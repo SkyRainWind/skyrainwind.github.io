@@ -36,7 +36,7 @@ I am Yufeng Tian, a 3-year undergraduate student from [Harbin Institute of Techn
 
 **Yufeng Tian\***, Shuiqi Cheng\*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, Qianwei Han, Zhecheng Yuan, and Huazhe Xu
 
-<a href="https://skyrainwind.github.io/papers/IROS-ViTaS.pdf" target="_blank">**Project**</a>
+<a href="https://skyrainwind.github.io/papers/IROS-ViTaS.pdf" target="_blank">**Paper**</a>
 <!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
 - Introduced ViTaS, a framework using using Soft Fusion Contrastive Learning and a CVAE module to fuse visual and tactile information, achieving state-of-the-art performance with high sample efficiency and low parameter count in robotic manipulation.
 </div>
