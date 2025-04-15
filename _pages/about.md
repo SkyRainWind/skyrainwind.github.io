@@ -19,12 +19,13 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am Yufeng Tian, a 3-year undergraduate student from [Harbin Institute of Technology](http://www.hit.edu.cn/). I was also a research intern at [IIIS](https://iiis.tsinghua.edu.cn/), where I am fortunate to be advised by Prof. [Huazhe Xu](http://hxu.rocks/) and Dr. [Zhecheng Yuan](https://gemcollector.github.io/).
+I am Yufeng Tian, a third-year undergraduate student from [Harbin Institute of Technology](http://www.hit.edu.cn/). I was also a research intern at [IIIS](https://iiis.tsinghua.edu.cn/), where I am fortunate to be advised by Prof. [Huazhe Xu](http://hxu.rocks/) and Dr. [Zhecheng Yuan](https://gemcollector.github.io/).
 
+My current research interests lie in reinforcement learning, robotics and embodied AI. Feel free to contact me.
 
 # 🔥 News
 <!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
-- *2025.02*: &nbsp;🎉🎉 ViTaS is released. Project page and Code is coming soon.
+- *2025.02*: &nbsp; ViTaS is released. Project page and Code is coming soon.
 
 # 📝 Publications 
 
