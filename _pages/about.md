@@ -31,14 +31,14 @@ I am Yufeng Tian, a 3-year undergraduate student from Harbin Institute of Techno
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/vitas.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Reinforcement Learning
+**ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Reinforcement Learning**
 <!-- [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) -->
 
 **Yufeng Tian\***, Shuiqi Cheng\*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, Qianwei Han, Zhecheng Yuan, and Huazhe Xu
 
 <a href="https://skyrainwind.github.io/papers/IROS-ViTaS.pdf" target="_blank">**Project**</a>
 <!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- Introduced ViTaS, a framework using using Soft Fusion Contrastive Learning and a CVAE module to fuse visual and tactile information, achieving state-of-the-art performance with high sample efficiency and low parameter count in robotic manipulation.
 </div>
 </div>
 
