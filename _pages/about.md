@@ -21,7 +21,7 @@ redirect_from:
 
 I am Yufeng Tian, a third-year undergraduate student from [Harbin Institute of Technology](http://www.hit.edu.cn/). I was also a research intern at [IIIS](https://iiis.tsinghua.edu.cn/), where I am fortunate to be advised by Prof. [Huazhe Xu](http://hxu.rocks/) and Dr. [Zhecheng Yuan](https://gemcollector.github.io/).
 
-I used to participate in competitive programming contests and awarded $5$ gold medals in regional contests. Please refer to [here](https://cpcfinder.com/student/702c71f2-8418-4921-b71e-cb85260e5c7b) for part of awards.
+I used to participate in competitive programming contests and awarded $5$ gold medals in regional contests. Please refer to [here](https://cpcfinder.com/student/702c71f2-8418-4921-b71e-cb85260e5c7b) for part of my awards.
 
 My current research interests lie in reinforcement learning, robotics and embodied AI. Feel free to contact me.
 
@@ -41,7 +41,7 @@ My current research interests lie in reinforcement learning, robotics and embodi
 
 <a href="https://skyrainwind.github.io/papers/IROS-ViTaS.pdf" target="_blank">**Paper**</a>
 <!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
-- Introduced ViTaS, a framework using using Soft Fusion Contrastive Learning and a CVAE module to fuse visual and tactile information, achieving state-of-the-art performance with high sample efficiency and low parameter count in robotic manipulation.
+- Introduced ViTaS, a framework using Soft Fusion Contrastive Learning and a CVAE module to fuse visual and tactile information, achieving state-of-the-art performance with high sample efficiency and low parameter count in reinforcement learning and robotic manipulation.
 </div>
 </div>
 
@@ -49,7 +49,9 @@ My current research interests lie in reinforcement learning, robotics and embodi
 
 # 🎖 Honors and Awards
 - *2024.12* Xiaomi Special Scholarship (Top 10 among 30000+ undergrads). 
+- *2024.05* HIT Top-10 Undergraduate Learner Nominees (Top 15 among 30000+ undergrads). 
 - *2023.10* National Scholarship (Top 2%). 
+- *2023.10* Heilongjiang Outstanding Undergraduate (Top 5%). 
 <!-- - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 <!-- # 📖 Educations -->
