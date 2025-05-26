@@ -41,7 +41,19 @@ My current research interests lie in reinforcement learning, robotics and embodi
 
 <a href="https://skyrainwind.github.io/papers/IROS-ViTaS.pdf" target="_blank">**Paper**</a>
 <!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
-- Introduced ViTaS, a framework using Soft Fusion Contrastive Learning and a CVAE module to fuse visual and tactile information, achieving state-of-the-art performance with high sample efficiency and low parameter count in reinforcement learning and robotic manipulation.
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/h3dp.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**H³DP: Triply-Hierarchical Diffusion Policy for Visuomotor Learning**
+<!-- [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) -->
+
+Yiyang Lu\*, **Yufeng Tian\***, Zhecheng Yuan\*, Xianbang Wang, Pu Hua, Zhengrong Xue, Huazhe Xu
+
+<a href="https://arxiv.org/pdf/2505.07819" target="_blank">**Paper**</a>
+<!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
 </div>
 </div>
 
