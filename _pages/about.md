@@ -27,6 +27,7 @@ My current research interests lie in reinforcement learning, robotics and embodi
 
 # 🔥 News
 <!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+- *2025.05*: &nbsp; H³DP is released.
 - *2025.02*: &nbsp; ViTaS is released. Project page and Code is coming soon.
 
 # 📝 Publications 
@@ -53,6 +54,7 @@ My current research interests lie in reinforcement learning, robotics and embodi
 Yiyang Lu\*, **Yufeng Tian\***, Zhecheng Yuan\*, Xianbang Wang, Pu Hua, Zhengrong Xue, Huazhe Xu
 
 <a href="https://arxiv.org/pdf/2505.07819" target="_blank">**Paper**</a>
+<a href="https://lyy-iiis.github.io/h3dp/" target="_blank">**Project**</a>
 <!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
 </div>
 </div>
@@ -60,8 +62,8 @@ Yiyang Lu\*, **Yufeng Tian\***, Zhecheng Yuan\*, Xianbang Wang, Pu Hua, Zhengron
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎖 Honors and Awards
+- *2025.05* HIT Top-10 Undergraduate Learners (Top 10 among 30000+ undergrads). 
 - *2024.12* Xiaomi Special Scholarship (Top 10 among 30000+ undergrads). 
-- *2024.05* HIT Top-10 Undergraduate Learner Nominees (Top 15 among 30000+ undergrads). 
 - *2023.10* National Scholarship (Top 2%). 
 - *2023.10* Heilongjiang Outstanding Undergraduate (Top 5%). 
 <!-- - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
