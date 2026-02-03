@@ -39,9 +39,9 @@ My current research interests lie in reinforcement learning, robotics and embodi
 **ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Reinforcement Learning**
 <!-- [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) -->
 
-<span class="bold">Yufeng Tian\*</span>, Shuiqi Cheng\*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, Qianwei Han, Zhecheng Yuan, and Huazhe Xu
+<b>Yufeng Tian\*</b>, Shuiqi Cheng\*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, Qianwei Han, Zhecheng Yuan, and Huazhe Xu
 
-<span class="italic">International Conference on Robotics and Automation (ICRA)</span>, 2026
+<i>International Conference on Robotics and Automation (ICRA)</i>, 2026
 
 <a href="https://skyrainwind.github.io/papers/icra-vitas.pdf" target="_blank">**Paper**</a>
 <!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
@@ -54,9 +54,9 @@ My current research interests lie in reinforcement learning, robotics and embodi
 **H³DP: Triply-Hierarchical Diffusion Policy for Visuomotor Learning**
 <!-- [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) -->
 
-Yiyang Lu\*, <span class="bold">Yufeng Tian\*</span>, Zhecheng Yuan\*, Xianbang Wang, Pu Hua, Zhengrong Xue, Huazhe Xu
+Yiyang Lu\*, <b>Yufeng Tian\*</b>, Zhecheng Yuan\*, Xianbang Wang, Pu Hua, Zhengrong Xue, Huazhe Xu
 
-<span class="italic">The International Conference on Learning Representations (ICLR)</span>, 2026
+<i>The International Conference on Learning Representations (ICLR)</i>, 2026
 
 <a href="https://arxiv.org/pdf/2505.07819" target="_blank">**Paper**</a>
 <a href="https://lyy-iiis.github.io/h3dp/" target="_blank">**Project**</a>
