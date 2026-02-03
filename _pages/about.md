@@ -19,7 +19,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am Yufeng Tian, a fourth-year undergraduate student from [Harbin Institute of Technology](http://www.hit.edu.cn/). I was also a research intern at [IIIS](https://iiis.tsinghua.edu.cn/), where I am fortunate to be advised by Prof. [Huazhe Xu](http://hxu.rocks/) and Dr. [Zhecheng Yuan](https://gemcollector.github.io/).
+I am a fourth-year undergraduate student from [Harbin Institute of Technology](http://www.hit.edu.cn/). I was also a research intern at [IIIS](https://iiis.tsinghua.edu.cn/), where I am fortunate to be advised by Prof. [Huazhe Xu](http://hxu.rocks/) and Dr. [Zhecheng Yuan](https://gemcollector.github.io/).
 
 I used to participate in competitive programming contests and awarded $5$ gold medals in regional contests.
 
@@ -67,11 +67,11 @@ Yiyang Lu\*, <b>Yufeng Tian\*</b>, Zhecheng Yuan\*, Xianbang Wang, Pu Hua, Zheng
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # Honors and Awards
-- *2025.10* National Scholarship (Top 2%). 
-- *2025.05* HIT Top-10 Undergraduate Learners (Top 10 among 30000+ undergrads). 
-- *2024.12* Xiaomi Special Scholarship (Top 10 among 30000+ undergrads). 
-- *2023.10* National Scholarship (Top 2%). 
-- *2023.10* Heilongjiang Outstanding Undergraduate (Top 5%). 
+- <i>2025.10</i>. National Scholarship (Top 2%). 
+- <i>2025.05</i>. HIT Top-10 Undergraduate Learners (Top 10 among 30000+ undergrads). 
+- <i>2024.12</i>. Xiaomi Special Scholarship (Top 10 among 30000+ undergrads). 
+- <i>2023.10</i>. National Scholarship (Top 2%). 
+<!-- - *2023.10* Heilongjiang Outstanding Undergraduate (Top 5%).  -->
 <!-- - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 <!-- # 📖 Educations -->
