@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Yufeng Tian"
-description              : "We always keep minority spirit."
+# description              : "We always keep minority spirit."
 # repository               : "RayeRen/acad-homepage.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -24,7 +24,7 @@ author:
   name             : "Yufeng Tian"
   avatar           : "images/android-chrome-512x512.png"
   bio              : "Harbin Institute of Technology"
-  location         : "Harbin, China"
+  location         : "Shanghai, China"
   employer         :
   pubmed           : 
   # googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
