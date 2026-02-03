@@ -43,41 +43,84 @@
 .paper-box {
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
+    border-bottom: 1px #e8e8e8 solid;
+    padding: 2.5em 0 2.5em 0;
+    margin-bottom: 1em;
+
 
     .paper-box-image{
         justify-content: center;
         display: flex;
         width: 100%;
         order: 2;
+        margin-top: 1em;
         img {
-            max-width: 400px;
-            box-shadow: 3px 3px 6px #888;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            }
         }
     }
-    
+
     .paper-box-text{
         max-width: 100%;
         order: 1;
+        line-height: 1.6;
+
+        p {
+            margin-bottom: 0.8em;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 1.05em;
+            line-height: 1.5;
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            color: #2a5db0;
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 1em;
+            display: inline-block;
+            padding: 0.25em 0.5em;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: rgba(42, 93, 176, 0.1);
+                text-decoration: none;
+            }
+        }
     }
-    
+
     @include breakpoint($medium) {
         .paper-box-image{
             justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
+            min-width: 250px;
+            max-width: 35%;
             order: 1;
+            margin-top: 0;
+            margin-right: 2em;
         }
-        
+
         .paper-box-text{
             justify-content: left;
-            padding-left: 2em;
+            flex: 1;
             max-width: 60%;
             order: 2;
         }
