@@ -39,7 +39,7 @@ My current research interests lie in reinforcement learning, robotics and embodi
 **ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning**
 <!-- [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) -->
 
-<b>Yufeng Tian\*</b>, Shuiqi Cheng\*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, Qianwei Han, Zhecheng Yuan, and Huazhe Xu
+<b>Yufeng Tian\*</b>, Shuiqi Cheng\*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, Qianwei Han, Zhecheng Yuan, Huazhe Xu
 
 <i>International Conference on Robotics and Automation (ICRA)</i>, 2026
 
