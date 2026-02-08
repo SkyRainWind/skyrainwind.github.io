@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <style>
+    /* 全局字体：标题用 Google Sans（现代感），正文用 Open Sans（高可读性） */
+    body {
+        font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* 标题系列：Google Sans（加粗清晰） */
+    h1, h2, h3, h4, h5, h6,
+    .title, .subtitle, .publication-title {
+        font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    /* 正文系列：Google Sans */
+    a, p, span, body {
+        font-weight: 450;
+        font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    }
+
+    /* 作者/机构等小字号文本 */
+    .is-size-5, .affiliation-note {
+        font-family: 'Open Sans', sans-serif !important;
+        font-weight: 500 !important;
+    }
+
+    /* 按钮文字 */
+    .button {
+        font-family: 'Google Sans', sans-serif !important;
+        font-weight: 500 !important;
+    }
+
+    /* 代码块保持等宽字体 */
+    code, pre {
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h1 style="text-align: center; margin-bottom: 0; font-size: 300%">
+            <span style="color: #FFAA55;">Vi</span><span style="color: #4ECDC4;">TaS</span>
+          </h1> -->
+          <h1 style="
+            text-align: center; 
+            margin-bottom: 0; 
+            font-size: 300%; 
+            background: linear-gradient(135deg, #f44703 0%, #06c6f1 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            display: inline-block;
+            letter-spacing: -1px;
+            font-weight: 700;
+            ">
+            ViTaS
+          </h1>
+          <h1 class="title is-1 publication-title">Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://skyrainwind.github.io/">Yufeng Tian</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              <a href="https://shuiqicheng.github.io/">Shuiqi Cheng</a><sup>2,*</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.stillwtm.site/">Tianming Wei</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/ZTX2021">Tianxing Zhou</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yuanhangz.com/">Yuanhang Zhang</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://storeblank.github.io/">Zixian Liu</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://der-mark.github.io/">Qianwei Han</a><sup>4</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://gemcollector.github.io/">Zhecheng Yuan</a><sup>3,4</sup>
+            </span>
+            <span class="author-block">
+              <a href="http://hxu.rocks/">Huazhe Xu</a><sup>3,4</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Harbin Institute of Technology,</span>
+            <span class="author-block"><sup>2</sup>The University of Hong Kong,</span>
+            <span class="author-block"><sup>3</sup>Tsinghua University, IIIS,</span>
+            <span class="author-block"><sup>4</sup>Shanghai Qi Zhi Institute,</span>
+            <span class="author-block"><sup>5</sup>Carnegie Mellon University</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <sup>*</sup> Equal contribution
+          </div>
+
+          <!-- <div class="is-size-5" style="color: #f77f06; margin-top: 0.0rem; font-weight: 500; letter-spacing: 0.0px;">
+            🦾 ICRA 2026 
+          </div> -->
+          <div class="is-size-5" style="margin-top: 1.2rem; font-weight: 600; letter-spacing: 0.5px; color: #f44703;">
+            <h3>
+              <span style="font-weight: bolder;">ICRA 2026</span> 
+            </h3>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/0-teaser.mp4" type="video/mp4">
+      </video>
+      <h4 class="has-text-centered">
+        Real-World Performance: Success • Generalization
+      </h4>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <hr style="margin: 3rem 0; border-color: #f0f0f0;">
+    <!-- <hr style="margin-top: 1em;"> -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="color: #058ABF;">Abstract</h2>
+        <div class="content has-text-justified">
+          <p class="abstract">
+            Tactile information plays a crucial role in human manipulation tasks and has recently garnered increasing attention in robotic manipulation.
+            However, existing approaches mostly focus on the alignment of visual and tactile features and the integration mechanism tends to be direct concatenation.
+            Consequently, they struggle to effectively cope with occluded scenarios due to neglecting the inherent complementary nature of both modalities and the alignment may not be exploited enough, limiting the potential of their real-world deployment.
+          </p>
+          <p class="abstract">
+            In this paper, we present ViTaS, a simple yet effective framework that incorporates both visual and tactile information to guide the behavior of an agent. We introduce Soft Fusion Contrastive Learning, an advanced version of conventional contrastive learning method and a CVAE module to utilize the alignment and complementarity within visuo-tactile representations. 
+            We demonstrate the effectiveness of our method in 12 simulated and 3 real-world environments, and our experiments show that ViTaS significantly outperforms existing baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- <hr style="margin-top: 1em;"> -->
+     <hr style="margin: 3rem 0; border-color: #f0f0f0;">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <img style="margin-top: 5px;" src="./static/images/0-methods.png" class="method-image">
+        <br>
+        <div class="content has-text-justified">
+          <p>
+            ViTaS takes vision and touch as inputs, which are then processed through separate CNN encoders. 
+            Encoded embeddings are utilized by soft fusion contrastive approach, 
+            yielding fused feature representation for policy network. 
+            A CVAE-based reconstruction framework is also applied for cross-modal integration.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container is-max-desktop">
+    <hr style="margin: 3rem 0; border-color: #f0f0f0;">
+    <!-- Simulation Experiments -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3" style="color: #058ABF; margin-bottom: 1.5rem;">Simulation Experiments</h2>
+        
+        <!-- 2x6 Video Grid -->
+        <div class="columns is-multiline is-centered" style="gap: 1.2rem; margin-bottom: 2.5rem;">
+          <!-- Row 1 -->
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Insertion</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Door</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Lift</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Pen Rotate</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Dual Arm Lift</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Mobile Catch</span>
+            </div>
+          </div>
+          
+          <!-- Row 2 -->
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Egg Rotate</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Block Rotate</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Block Spin</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Insertion Noisy</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Lift w/ Cap</span>
+            </div>
+          </div>
+          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
+            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
+                <source src="./static/videos/toby2.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Lift w/ Can</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Results Table -->
+        <div class="has-text-centered" style="margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <img src="./static/images/1-simulation_experiments.png" 
+            alt="Simulation Results" 
+            style="width: 60%; height: auto; border-radius: 0px; box-shadow: 0 0px 0px rgba(0,0,0,0.08);">
+        <p class="has-text-grey is-size-7" style="margin-top: 0.5rem; line-height: 1.4;">
+            Success rates (%) across 12 simulated tasks
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <hr style="margin: 3rem 0; border-color: #f0f0f0;">
+
+    <!-- Real-World Experiments -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3" style="color: #058ABF; margin-bottom: 1.5rem;">Real-World Experiments</h2>
+        
+        <!-- Setup Image & Caption -->
+        <div class="has-text-centered" style="margin-bottom: 2.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <img src="./static/images/2-realworld_setting.png" alt="Real-World Setup" style="max-width: 60%; border-radius: 0px; box-shadow: 0 0px 0px rgba(0,0,0,0.08);">
+          <p class="has-text-grey is-size-7" style="margin-top: 0.8rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Hardware setup for ViTaS
+          </p>
+        </div>
+        <div class="has-text-centered" style="margin-bottom: 2.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <img src="./static/images/2-realworld_setting-2.png" alt="Real-World Setup" style="max-width: 60%; border-radius: 0px; box-shadow: 0 0px 0px rgba(0,0,0,0.08);">
+          <p class="has-text-grey is-size-7" style="margin-top: 0.8rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            ViTaS in imitation learning based on diffusion policy
+          </p>
+        </div>
+        <!-- 3 Real-World Task Videos -->
+        <div class="columns is-centered" style="gap: 2rem; margin-bottom: 2.5rem;">
+          <div class="column is-one-third-desktop is-full-tablet" style="min-width: 240px;">
+            <div class="real-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 1rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.8rem;" height="180">
+                <source src="./static/videos/1-clean.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 1.1rem; color: #333;">Dual Arm Clean</span>
+            </div>
+          </div>
+          <div class="column is-one-third-desktop is-full-tablet" style="min-width: 240px;">
+            <div class="real-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 1rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.8rem;" height="180">
+                <source src="./static/videos/1-TPP.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 1.1rem; color: #333;">Table Pick Place</span>
+            </div>
+          </div>
+          <div class="column is-one-third-desktop is-full-tablet" style="min-width: 240px;">
+            <div class="real-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 1rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.8rem;" height="180">
+                <source src="./static/videos/1-FPP.mp4" type="video/mp4">
+              </video>
+              <span class="has-text-weight-600" style="font-size: 1.1rem; color: #333;">Fridge Pick Place</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Real Results -->
+        <div class="has-text-centered" style="margin-top: 1.5rem;">
+          <img src="./static/images/3-realword_experiments.png" alt="Real-World Results" style="max-width: 50%; border-radius: 0px; box-shadow: 0 0px 0px rgba(0,0,0,0.08);">
+          <p class="has-text-grey is-size-7" style="margin-top: 0.5rem;">Success rates (%) on 3 real-world tasks (25 trials each)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <!-- <hr style="margin-top: 1em;"> -->
+    <h2 class="title has-text-centered">BibTeX</h2>
+    <pre><code>@article{tian2026vitas,
+  author    = {Tian, Yufeng and Cheng, Shuiqi and Wei, Tianming and Zhou, Tianxing and Zhang, Yuanhang and Liu, Zixian and Han, Qianwei and Yuan, Zhecheng and Xu, Huazhe},
+  title     = {ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning},
+  journal   = {ICRA},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> .
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

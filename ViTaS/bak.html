@@ -1,0 +1,82 @@
+<!-- 替换原 Google Fonts 链接（放入 <head>） -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- 替换原 <style> 中的字体配置（放入 <head> 末尾） -->
+<style>
+  /* =============== 全局基础 =============== */
+  :root {
+    /* 学术灰阶系统（WCAG AAA 级对比度） */
+    --text-primary: #1a1a1a;      /* 标题/关键内容 */
+    --text-secondary: #4a4a4a;    /* 正文 */
+    --text-tertiary: #6a6a6a;     /* 次要信息 */
+    --text-muted: #8a8a8a;        /* 注释/元数据 */
+    --link-color: #1a56db;        /* 学术蓝（非刺眼） */
+  }
+
+  /* =============== 字体栈 =============== */
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important; /* 学术阅读黄金行高 */
+    color: var(--text-secondary) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* =============== 标题系统（层次清晰） =============== */
+  h1, h2, h3, h4, h5, h6,
+  .title, .subtitle, .publication-title {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important; /* 微负字距提升紧凑感 */
+    color: var(--text-primary) !important;
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  h1 { font-weight: 700 !important; font-size: 2.25rem !important; } /* 36px */
+  h2 { font-weight: 600 !important; font-size: 1.75rem !important; } /* 28px */
+  h3 { font-weight: 600 !important; font-size: 1.375rem !important; } /* 22px */
+
+  /* =============== 正文与元数据 =============== */
+  p, li, span, a:not(.button) {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+    color: var(--text-secondary) !important;
+  }
+  .is-size-5, .affiliation-note, .author-block {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important; /* 作者/机构用中等字重提升可读性 */
+    color: var(--text-tertiary) !important;
+    letter-spacing: -0.01em;
+  }
+  .affiliation-note { 
+    font-weight: 400 !important; 
+    color: var(--text-muted) !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* =============== 链接与交互 =============== */
+  a:not(.button) {
+    color: var(--link-color) !important;
+    /* text-decoration: underline !important; */
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+    transition: color 0.2s ease;
+  }
+  a:hover:not(.button) {
+    color: #0d4a96 !important; /* 深蓝悬停 */
+    text-decoration-thickness: 1.5px !important;
+  }
+
+  /* =============== 按钮（学术克制感） =============== */
+  .button {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+    border-radius: 6px !important;
+    padding-left: 1.1rem !important;
+    padding-right: 1.1rem !important;
+  }
+
+</style>
