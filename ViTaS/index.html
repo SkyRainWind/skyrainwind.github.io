@@ -39,6 +39,57 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <style>
+    /* 自定义容器最大宽度 */
+    .container.is-max-custom {
+        max-width: 1400px !important;
+        padding: 0 20px;
+    }
+
+    /* 响应式设计 */
+    @media screen and (min-width: 1408px) {
+        .container.is-max-custom {
+            max-width: 1400px !important;
+        }
+    }
+
+    @media screen and (max-width: 1407px) and (min-width: 1024px) {
+        .container.is-max-custom {
+            max-width: 95% !important;
+            padding: 0 20px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .container.is-max-custom {
+            max-width: 100% !important;
+            padding: 0 15px;
+        }
+    }
+
+    /* 对于内容区域，调整最大宽度 */
+    .column.is-full-width {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* 调整摘要部分的宽度 */
+    .content.has-text-justified {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* 调整视频容器 */
+    .hero.teaser .container {
+        max-width: 1200px !important;
+    }
+
+    /* 调整section的内边距，在大屏幕上减少垂直空间 */
+    @media screen and (min-width: 1024px) {
+        .section {
+            padding: 2rem 1.5rem !important;
+        }
+    }
+
     /* 全局字体：标题用 Google Sans（现代感），正文用 Open Sans（高可读性） */
     body {
         font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
@@ -124,7 +175,7 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container is-max-custom">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <!-- <h1 style="text-align: center; margin-bottom: 0; font-size: 300%">
@@ -148,11 +199,11 @@
           <h1 class="title is-1 publication-title">Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://skyrainwind.github.io/">Yufeng Tian</a><sup>1,*</sup>,</span>
+              <a href="https://skyrainwind.github.io/">Yufeng Tian</a><sup>1,2*</sup>,</span>
             <span class="author-block">
-              <a href="https://shuiqicheng.github.io/">Shuiqi Cheng</a><sup>2,*</sup>,</span>
+              <a href="https://shuiqicheng.github.io/">Shuiqi Cheng</a><sup>4*</sup>,</span>
             <span class="author-block">
-              <a href="https://www.stillwtm.site/">Tianming Wei</a><sup>3</sup>,
+              <a href="https://www.stillwtm.site/">Tianming Wei</a><sup>1,3</sup>,
             </span>
             <span class="author-block">
               <a href="https://github.com/ZTX2021">Tianxing Zhou</a><sup>3</sup>,
@@ -164,21 +215,21 @@
               <a href="https://storeblank.github.io/">Zixian Liu</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://der-mark.github.io/">Qianwei Han</a><sup>4</sup>
+              <a href="https://der-mark.github.io/">Qianwei Han</a><sup>1</sup>
             </span>
             <span class="author-block">
-              <a href="https://gemcollector.github.io/">Zhecheng Yuan</a><sup>3,4</sup>
+              <a href="https://gemcollector.github.io/">Zhecheng Yuan</a><sup>1,3</sup>
             </span>
             <span class="author-block">
-              <a href="http://hxu.rocks/">Huazhe Xu</a><sup>3,4</sup>
+              <a href="http://hxu.rocks/">Huazhe Xu</a><sup>1,3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Harbin Institute of Technology,</span>
-            <span class="author-block"><sup>2</sup>The University of Hong Kong,</span>
-            <span class="author-block"><sup>3</sup>Tsinghua University, IIIS,</span>
-            <span class="author-block"><sup>4</sup>Shanghai Qi Zhi Institute,</span>
+            <span class="author-block"><sup>1</sup>Shanghai Qi Zhi Institute,</span>
+            <span class="author-block"><sup>2</sup>Harbin Institute of Technology,</span>
+            <span class="author-block"><sup>3</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>4</sup>The University of Hong Kong,</span>
             <span class="author-block"><sup>5</sup>Carnegie Mellon University</span>
           </div>
 
@@ -264,7 +315,7 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-max-custom">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/0-teaser.mp4" type="video/mp4">
@@ -277,7 +328,7 @@
 </section>
 
 <!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-max-custom">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/teaser.mp4"
@@ -352,12 +403,12 @@
 
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-custom">
     <hr style="margin: 3rem 0; border-color: #f0f0f0;">
     <!-- <hr style="margin-top: 1em;"> -->
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h2 class="title is-3" style="color: #058ABF;">Abstract</h2>
         <div class="content has-text-justified">
           <p class="abstract">
@@ -378,7 +429,7 @@
      <hr style="margin: 3rem 0; border-color: #f0f0f0;">
     <!-- Method. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h2 class="title is-3">Method</h2>
         <img style="margin-top: 5px;" src="./static/images/0-methods.png" class="method-image">
         <br>
@@ -395,7 +446,7 @@
 
   </div>
 
-  <div class="container is-max-desktop">
+  <div class="container is-max-custom">
     <hr style="margin: 3rem 0; border-color: #f0f0f0;">
     <!-- Simulation Experiments -->
     <div class="columns is-centered has-text-centered">
@@ -408,7 +459,7 @@
           <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
             <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
               <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
+                <source src="./static/videos/insertion.gif" type="video/mp4">
               </video>
               <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Insertion</span>
             </div>
@@ -416,7 +467,7 @@
           <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
             <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
               <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
+                <source src="./static/videos/door.gif" type="video/mp4">
               </video>
               <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Door</span>
             </div>
@@ -424,41 +475,16 @@
           <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
             <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
               <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Lift</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
+                <source src="./static/videos/penro.gif" type="video/mp4">
               </video>
               <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Pen Rotate</span>
             </div>
           </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Dual Arm Lift</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Mobile Catch</span>
-            </div>
-          </div>
           
-          <!-- Row 2 -->
           <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
             <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
               <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
+                <source src="./static/videos/egg.gif" type="video/mp4">
               </video>
               <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Egg Rotate</span>
             </div>
@@ -466,41 +492,9 @@
           <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
             <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
               <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
+                <source src="./static/videos/block.gif" type="video/mp4">
               </video>
               <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Block Rotate</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Block Spin</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Insertion Noisy</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Lift w/ Cap</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/toby2.mp4" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Lift w/ Can</span>
             </div>
           </div>
         </div>
