@@ -327,11 +327,9 @@ tr:nth-child(even) {background: #fafafa;}
 <section class="hero teaser">
   <div class="container is-max-custom">
     <div class="hero-body">
-      <div class="media-container media-video">
-        <video id="teaser" autoplay muted loop playsinline>
+        <video id="method-video" autoplay muted loop playsinline>
           <source src="./static/videos/0-teaser.mp4" type="video/mp4">
         </video>
-      </div>
       <h4 class="has-text-centered teaser-caption">
         Real-World Performance: Success • Generalization
       </h4>
@@ -443,7 +441,7 @@ tr:nth-child(even) {background: #fafafa;}
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Method</h2>
-        <div class="media-container media-video media-container--method">
+        <div class="media-container">
           <video id="method-video" autoplay muted loop playsinline>
             <source src="./static/videos/methods.mp4" type="video/mp4">
           </video>
@@ -465,42 +463,8 @@ tr:nth-child(even) {background: #fafafa;}
   <div class="container is-max-custom">
     <hr style="margin: 3rem 0; border-color: #f0f0f0;">
     <!-- Simulation Experiments -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <h2 class="title is-3" style="color: #058ABF; margin-bottom: 1.5rem;">Simulation Experiments</h2>
-        
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-full-width">
-            <div class="content has-text-justified">
-              <p>
-                We evaluate on 12 simulated tasks from various benchmarks, including: dexterous hand rotation (Gymnasium), contact-rich manipulation (Robosuite), Insertion, Mobile Catching, and Block Spinning. Beyond these foundational experiments, we introduce a series of auxiliary tasks involving altering object shapes in Lift or modifying physical parameters in Pen Rotation.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div class="has-text-centered" style="margin: 1.25rem 0;">
-          <button type="button" class="button is-medium toggle-figures-btn" id="toggle-simulation-figures" aria-expanded="true">
-            <span class="icon"><i class="fas fa-chart-line"></i></span>
-            <span id="toggle-simulation-label">Hide Simulation Figures</span>
-          </button>
-        </div>
 
-        <div id="simulation-figures" class="simulation-figures-wrap">
-          <div class="content-figure">
-            <img src="./static/images/1-simulation_experiments.png" alt="Simulation Results">
-            <p class="figure-caption">Success rates (%) across 12 simulated tasks</p>
-          </div>
-          <div class="content-figure">
-            <img src="./static/images/curve.png" alt="Learning curves">
-            <p class="figure-caption">Learning curves</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <hr style="margin: 3rem 0; border-color: #f0f0f0;">
 
     <!-- Real-World Experiments -->
     <div class="columns is-centered has-text-centered section-block">
@@ -563,11 +527,42 @@ tr:nth-child(even) {background: #fafafa;}
             <span class="task-video-title">Fridge Pick Place</span>
           </div>
         </div>
+      </div>
+    </div>
+    <hr style="margin: 3rem 0; border-color: #f0f0f0;">
 
-        <div class="content-figure">
-          <img src="./static/images/3-realword_experiments.png" alt="Real-World Results">
-          <p class="figure-caption">Success rates (%) on 3 real-world tasks (25 trials each)</p>
+        <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3" style="color: #058ABF; margin-bottom: 1.5rem;">Simulation Experiments</h2>
+        
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-justified">
+              <p>
+                We evaluate on 12 simulated tasks from various benchmarks, including: dexterous hand rotation (Gymnasium), contact-rich manipulation (Robosuite), Insertion, Mobile Catching, and Block Spinning. Beyond these foundational experiments, we introduce a series of auxiliary tasks involving altering object shapes in Lift or modifying physical parameters in Pen Rotation.
+              </p>
+            </div>
+          </div>
         </div>
+
+        <div class="has-text-centered" style="margin: 1.25rem 0;">
+          <button type="button" class="button is-medium toggle-figures-btn" id="toggle-simulation-figures" aria-expanded="false">
+            <span class="icon"><i class="fas fa-chart-line"></i></span>
+            <span id="toggle-simulation-label">Show Simulation Figures</span>
+          </button>
+        </div>
+
+        <div id="simulation-figures" class="simulation-figures-wrap collapsed">
+          <div class="content-figure">
+            <img src="./static/images/1-simulation_experiments.png" alt="Simulation Results">
+            <p class="figure-caption">Success rates (%) across 12 simulated tasks</p>
+          </div>
+          <div class="content-figure">
+            <img src="./static/images/curve.png" alt="Learning curves">
+            <p class="figure-caption">Learning curves</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
