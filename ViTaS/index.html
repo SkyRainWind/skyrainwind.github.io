@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<style>
+.table-wrap {max-width: 1100px; margin: 12px auto; font-family: "Inter", Arial, sans-serif;}
+table {width: 100%; border-collapse: collapse; font-size: 14px; text-align: center;}
+th, td {border: 1px solid #e9ecef; padding: 8px 10px;}
+th {background: #f7f9fb; font-weight: 600;}
+tr:nth-child(even) {background: #fafafa;}
+.badge-best   {font-weight: 700; color: #d7263d;}
+.badge-second {font-weight: 600; color: #1f78b4;}
+.task {text-align: left; white-space: nowrap;}
+</style>
 <html>
 <head>
   <meta charset="utf-8">
@@ -317,10 +327,12 @@
 <section class="hero teaser">
   <div class="container is-max-custom">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/0-teaser.mp4" type="video/mp4">
-      </video>
-      <h4 class="has-text-centered">
+      <div class="media-container media-video">
+        <video id="teaser" autoplay muted loop playsinline>
+          <source src="./static/videos/0-teaser.mp4" type="video/mp4">
+        </video>
+      </div>
+      <h4 class="has-text-centered teaser-caption">
         Real-World Performance: Success • Generalization
       </h4>
     </div>
@@ -431,7 +443,11 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Method</h2>
-        <img style="margin-top: 5px;" src="./static/images/0-methods.png" class="method-image">
+        <div class="media-container media-video media-container--method">
+          <video id="method-video" autoplay muted loop playsinline>
+            <source src="./static/videos/methods.mp4" type="video/mp4">
+          </video>
+        </div>
         <br>
         <div class="content has-text-justified">
           <p>
@@ -453,133 +469,107 @@
       <div class="column is-full">
         <h2 class="title is-3" style="color: #058ABF; margin-bottom: 1.5rem;">Simulation Experiments</h2>
         
-        <!-- 2x6 Video Grid -->
-        <div class="columns is-multiline is-centered" style="gap: 1.2rem; margin-bottom: 2.5rem;">
-          <!-- Row 1 -->
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/insertion.gif" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Insertion</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/door.gif" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Door</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/penro.gif" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Pen Rotate</span>
-            </div>
-          </div>
-          
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/egg.gif" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Egg Rotate</span>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-half-tablet" style="min-width: 180px;">
-            <div class="simulation-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 0.8rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.6rem;" height="120">
-                <source src="./static/videos/block.gif" type="video/mp4">
-              </video>
-              <span class="has-text-weight-600" style="font-size: 0.95rem; color: #333;">Block Rotate</span>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-justified">
+              <p>
+                We evaluate on 12 simulated tasks from various benchmarks, including: dexterous hand rotation (Gymnasium), contact-rich manipulation (Robosuite), Insertion, Mobile Catching, and Block Spinning. Beyond these foundational experiments, we introduce a series of auxiliary tasks involving altering object shapes in Lift or modifying physical parameters in Pen Rotation.
+              </p>
             </div>
           </div>
         </div>
-        
-        <!-- Results Table -->
-        <div class="has-text-centered" style="margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-        <img src="./static/images/1-simulation_experiments.png" 
-            alt="Simulation Results" 
-            style="width: 60%; height: auto; border-radius: 0px; box-shadow: 0 0px 0px rgba(0,0,0,0.08);">
-        <p class="has-text-grey is-size-7" style="margin-top: 0.5rem; line-height: 1.4;">
-            Success rates (%) across 12 simulated tasks
-        </p>
+
+        <div class="has-text-centered" style="margin: 1.25rem 0;">
+          <button type="button" class="button is-medium toggle-figures-btn" id="toggle-simulation-figures" aria-expanded="true">
+            <span class="icon"><i class="fas fa-chart-line"></i></span>
+            <span id="toggle-simulation-label">Hide Simulation Figures</span>
+          </button>
         </div>
+
+        <div id="simulation-figures" class="simulation-figures-wrap">
+          <div class="content-figure">
+            <img src="./static/images/1-simulation_experiments.png" alt="Simulation Results">
+            <p class="figure-caption">Success rates (%) across 12 simulated tasks</p>
+          </div>
+          <div class="content-figure">
+            <img src="./static/images/curve.png" alt="Learning curves">
+            <p class="figure-caption">Learning curves</p>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <hr style="margin: 3rem 0; border-color: #f0f0f0;">
 
     <!-- Real-World Experiments -->
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered section-block">
       <div class="column is-full">
         <h2 class="title is-3" style="color: #058ABF; margin-bottom: 1.5rem;">Real-World Experiments</h2>
         
-        <!-- Setup Image & Caption -->
-        <div class="has-text-centered" style="margin-bottom: 2.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-          <img src="./static/images/2-realworld_setting.png" alt="Real-World Setup" style="max-width: 60%; border-radius: 0px; box-shadow: 0 0px 0px rgba(0,0,0,0.08);">
-          <p class="has-text-grey is-size-7" style="margin-top: 0.8rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-            Hardware setup for ViTaS
-          </p>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-justified">
+              <p>
+                To further assess ViTaS's capability in extracting and integrating multimodal features across diverse scenarios, we adopt Diffusion Policy for real-world evaluations. As illustrated below, we replace DP’s original CNN and transformer encoders with those from ViTaS, while retaining the same training procedure for soft fusion contrastive and CVAE modules as in simulation.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="has-text-centered" style="margin-bottom: 2.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-          <img src="./static/images/2-realworld_setting-2.png" alt="Real-World Setup" style="max-width: 60%; border-radius: 0px; box-shadow: 0 0px 0px rgba(0,0,0,0.08);">
-          <p class="has-text-grey is-size-7" style="margin-top: 0.8rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-            ViTaS in imitation learning based on diffusion policy
-          </p>
+
+        <div class="content-figure content-figure--narrow">
+          <img src="./static/images/2-realworld_setting-2.png" alt="Real-World Setup">
+          <p class="figure-caption">ViTaS in imitation learning based on diffusion policy</p>
         </div>
-        <!-- 3 Real-World Task Videos -->
-        <div class="columns is-centered" style="gap: 2rem; margin-bottom: 2.5rem;">
-          <div class="column is-one-third-desktop is-full-tablet" style="min-width: 240px;">
-            <div class="real-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 1rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.8rem;" height="180">
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-justified">
+              <p>
+                We use Galaxea-R1 Humanoid Robot for manipulation, with 3D-ViTaC tactile sensors attached to the end effector.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-figure">
+          <img src="./static/images/2-realworld_setting.png" alt="Real-World Setup">
+          <p class="figure-caption">Real-world setup for ViTaS.</p>
+        </div>
+
+        <div class="task-videos-row">
+          <div class="task-video-card">
+            <div class="task-video-wrapper">
+              <video autoplay muted loop playsinline>
                 <source src="./static/videos/1-clean.mp4" type="video/mp4">
               </video>
-              <span class="has-text-weight-600" style="font-size: 1.1rem; color: #333;">Dual Arm Clean</span>
             </div>
+            <span class="task-video-title">Dual Arm Clean</span>
           </div>
-          <div class="column is-one-third-desktop is-full-tablet" style="min-width: 240px;">
-            <div class="real-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 1rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.8rem;" height="180">
+          <div class="task-video-card">
+            <div class="task-video-wrapper">
+              <video autoplay muted loop playsinline>
                 <source src="./static/videos/1-TPP.mp4" type="video/mp4">
               </video>
-              <span class="has-text-weight-600" style="font-size: 1.1rem; color: #333;">Table Pick Place</span>
             </div>
+            <span class="task-video-title">Table Pick Place</span>
           </div>
-          <div class="column is-one-third-desktop is-full-tablet" style="min-width: 240px;">
-            <div class="real-task-card" style="border: 1px solid #eaeaea; border-radius: 8px; padding: 1rem; background: #fafafa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-              <video autoplay muted loop playsinline style="width: 100%; border-radius: 6px; background: #000; margin-bottom: 0.8rem;" height="180">
+          <div class="task-video-card">
+            <div class="task-video-wrapper">
+              <video autoplay muted loop playsinline>
                 <source src="./static/videos/1-FPP.mp4" type="video/mp4">
               </video>
-              <span class="has-text-weight-600" style="font-size: 1.1rem; color: #333;">Fridge Pick Place</span>
             </div>
+            <span class="task-video-title">Fridge Pick Place</span>
           </div>
         </div>
-        
-        <!-- Real Results -->
-        <div class="has-text-centered" style="margin-top: 1.5rem;">
-          <img src="./static/images/3-realword_experiments.png" alt="Real-World Results" style="max-width: 50%; border-radius: 0px; box-shadow: 0 0px 0px rgba(0,0,0,0.08);">
-          <p class="has-text-grey is-size-7" style="margin-top: 0.5rem;">Success rates (%) on 3 real-world tasks (25 trials each)</p>
+
+        <div class="content-figure">
+          <img src="./static/images/3-realword_experiments.png" alt="Real-World Results">
+          <p class="figure-caption">Success rates (%) on 3 real-world tasks (25 trials each)</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <!-- <hr style="margin-top: 1em;"> -->
-    <h2 class="title has-text-centered">BibTeX</h2>
-    <pre><code>@article{tian2026vitas,
-  author    = {Tian, Yufeng and Cheng, Shuiqi and Wei, Tianming and Zhou, Tianxing and Zhang, Yuanhang and Liu, Zixian and Han, Qianwei and Yuan, Zhecheng and Xu, Huazhe},
-  title     = {ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning},
-  journal   = {ICRA},
-  year      = {2026},
-}</code></pre>
   </div>
 </section>
 

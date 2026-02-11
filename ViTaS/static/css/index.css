@@ -187,3 +187,165 @@ h2, .title.is-3 {
     max-height: 100%;
     max-width: 100%;
 }
+
+/* ========== Unified media containers (videos + figures) ========== */
+.media-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.media-container.media-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.media-container.media-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Method video: fill frame, no letterboxing (remove black bars) */
+.media-container--method video {
+  object-fit: cover;
+}
+
+.teaser-caption {
+  margin-top: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.content-figure {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.content-figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* Narrow figure for diagram / pipeline images */
+.content-figure--narrow {
+  max-width: 580px;
+}
+
+.figure-caption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Simulation figures: collapsible block */
+.simulation-figures-wrap {
+  max-height: 2000px;
+  transition: opacity 0.25s ease, max-height 0.4s ease;
+  overflow: hidden;
+}
+
+.simulation-figures-wrap.collapsed {
+  opacity: 0;
+  max-height: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none;
+}
+
+.simulation-figures-wrap .content-figure {
+  margin-bottom: 2rem;
+}
+
+.simulation-figures-wrap .content-figure:last-child {
+  margin-bottom: 0;
+}
+
+.toggle-figures-btn {
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.toggle-figures-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Real-world task videos: equal-height cards */
+.task-videos-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.task-video-card {
+  flex: 1 1 280px;
+  max-width: 360px;
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+
+.task-video-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.task-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.task-video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.task-video-title {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.section-block {
+  scroll-margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .media-container,
+  .content-figure { max-width: 100%; }
+  .task-videos-row { flex-direction: column; align-items: center; }
+  .task-video-card { max-width: 100%; }
+}

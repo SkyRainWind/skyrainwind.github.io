@@ -21,6 +21,19 @@ function setInterpolationImage(i) {
 
 
 $(document).ready(function() {
+    // Toggle simulation figures (charts + curves)
+    var $simWrap = $('#simulation-figures');
+    var $btn = $('#toggle-simulation-figures');
+    var $label = $('#toggle-simulation-label');
+    if ($simWrap.length && $btn.length) {
+      $btn.on('click', function() {
+        $simWrap.toggleClass('collapsed');
+        var isCollapsed = $simWrap.hasClass('collapsed');
+        $btn.attr('aria-expanded', !isCollapsed);
+        $label.text(isCollapsed ? 'Show Simulation Figures' : 'Hide Simulation Figures');
+      });
+    }
+
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
