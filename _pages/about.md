@@ -43,7 +43,7 @@ My current research interests lie in reinforcement learning, robotics and embodi
 
 <i>International Conference on Robotics and Automation (ICRA)</i>, 2026
 
-<a href="https://skyrainwind.github.io/papers/icra_vitas.pdf" target="_blank">**Paper**</a>
+<a href="https://arxiv.org/pdf/2602.11643" target="_blank">**Paper**</a>
 <a href="https://skyrainwind.github.io/ViTaS/index.html" target="_blank">**Project**</a>
 <a href="https://github.com/SkyRainWind/ViTaS" target="_blank">**Code**</a>
 <!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
