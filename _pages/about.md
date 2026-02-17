@@ -19,7 +19,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a fourth-year undergraduate student from [Harbin Institute of Technology](http://www.hit.edu.cn/). I was also a research intern at [IIIS](https://iiis.tsinghua.edu.cn/), where I am fortunate to be advised by Prof. [Huazhe Xu](http://hxu.rocks/) and Dr. [Zhecheng Yuan](https://gemcollector.github.io/).
+I am a fourth-year undergraduate student from [Harbin Institute of Technology](http://www.hit.edu.cn/). I was also a research intern at [IIIS](https://iiis.tsinghua.edu.cn/) and [Shanghai Qi Zhi Institute](https://www.sqz.ac.cn/), where I am fortunate to be advised by Prof. [Huazhe Xu](http://hxu.rocks/) and Dr. [Zhecheng Yuan](https://gemcollector.github.io/).
 
 I used to participate in competitive programming contests and awarded $5$ gold medals in regional contests.
 
