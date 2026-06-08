@@ -41,7 +41,7 @@ My current research interests lie in reinforcement learning, robotics and embodi
 
 <b>Yufeng Tian\*</b>, Shuiqi Cheng\*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, Qianwei Han, Zhecheng Yuan, Huazhe Xu
 
-<i>International Conference on Robotics and Automation (ICRA)</i>, 2026 (<b>Oral</b>)
+<i>International Conference on Robotics and Automation (ICRA)</i>, 2026 <b>(Oral)</b>
 
 <a href="https://arxiv.org/pdf/2602.11643" target="_blank">**Paper**</a>
 <a href="https://skyrainwind.github.io/ViTaS/index.html" target="_blank">**Project**</a>
